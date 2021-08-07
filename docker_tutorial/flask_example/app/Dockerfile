@@ -8,7 +8,7 @@ COPY . /app
 WORKDIR /app  
 
 # instala as dependencias do python
-RUN pip install -u flask  
+RUN pip install flask  
 
 # requerimento para rodar o flask run
 ENV FLASK_APP=flask_app.py  
