@@ -15,3 +15,7 @@ ENV FLASK_APP=flask_app.py
 
 # comando rodado ao iniciar o container
 CMD ["flask", "run", "--host", "0.0.0.0", "--port", "5000"]  
+
+RUN pip install flask psycopg2 # instala as dependencias do python
+
+COPY ./db_entrypoint/sql_entry.sql /docker-entrypoint-initdb.d/sql_entry.sql
