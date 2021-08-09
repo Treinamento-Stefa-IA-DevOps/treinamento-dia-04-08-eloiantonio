@@ -13,4 +13,7 @@ def titanic(Sex:int, Age:float, Lifeboat:int, Pclass: int):
 
 @codigo.get('/model')
 def get():
-    return {'survived':result}
+    return {"survived": "bool",
+	        "status": "int",	
+	        "message": "string",	
+            }
