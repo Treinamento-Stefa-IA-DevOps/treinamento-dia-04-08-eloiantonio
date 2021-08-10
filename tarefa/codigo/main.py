@@ -13,8 +13,9 @@ def titanic(Sex:int, Age:float, Lifeboat:int, Pclass: int):
     result = titanic.predict(X)
 
 @app.get('/model')
-def get():
-    return {"survived": "bool",
+def get(Sex:int, Age:float, Lifeboat:int, Pclass: int):
+    y = titanic(Sex, Age, Lifeboat, Pclass)    
+    return {"survived": y,
 	        "status": "int",	
 	        "message": "string",	
             }
